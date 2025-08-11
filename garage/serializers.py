@@ -18,6 +18,6 @@ class CarSerializer(serializers.ModelSerializer):
             'kraftstoffart', 'getriebe', 'au_hu',
             'leistung', 'gewicht', 'hubraum', 'vin',
             'ausstattung', 'extras', 'sonstigeMerkmale',
-            'images',    # ← hier das neue Feld mit aufnehmen
+            'images'
         ]
         read_only_fields = ['id', 'images']
