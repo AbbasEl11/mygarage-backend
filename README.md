@@ -3,7 +3,7 @@
 This is the backend for the **MyGarage** app. It exposes a REST API for managing vehicles and related data.
 The frontend (Ionic + React) consumes these endpoints.
 
-➡ **Backend Repository:** [MyGarage Frontend](https://github.com/AbbasEl11/mygarage-app) 
+➡ **Frontend Repository:** [MyGarage Frontend](https://github.com/AbbasEl11/mygarage-app) 
 
 ---
 
