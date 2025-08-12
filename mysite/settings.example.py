@@ -36,7 +36,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'garage',
+    'drf_spectacular',
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "MyGarage API",
+    "DESCRIPTION": "Django REST API for vehicle management",
+    "VERSION": "1.0.0",
+}
 
 # ------------------------------------------------------------
 # Middleware

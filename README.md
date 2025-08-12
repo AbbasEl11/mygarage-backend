@@ -101,31 +101,31 @@ See `requirements.txt`. Minimal set:
 
 ---
 
-## 📚 API Docs (optional)
+## Demo Data
 
-If you want OpenAPI/Swagger docs, add **drf-spectacular**:
+To load demo vehicles into the database, run:
 
-```python
-# settings.py
-INSTALLED_APPS += ["drf_spectacular"]
-REST_FRAMEWORK = {
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-}
+```
+python manage.py loaddata cars_fixture.json
 ```
 
-```python
-# urls.py
-from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
-
-urlpatterns += [
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
-]
-```
-
-Then open: `/api/docs/`
+This will insert sample `Car` records (with image paths) into your local database.
 
 ---
+
+## 📚 API Documentation (Swagger)
+
+Interactive API documentation is available via Swagger UI.
+
+**URL:** [http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)
+
+You can explore available endpoints, view request/response schemas, and test API calls directly from the browser.
+
+## Screenshots
+
+**Admin Panel**
+![Admin Panel](screensshots/Django-Admin.png)
+
 
 ## 🗃️ Project Structure (recommended)
 
@@ -147,7 +147,8 @@ mygarage-backend/
 ├─ manage.py
 ├─ requirements.txt
 ├─ README.md
-└─ .gitignore
+├─ .gitignore
+└─ cars_fixture.json
 ```
 
 ---
