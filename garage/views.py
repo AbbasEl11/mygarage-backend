@@ -9,15 +9,12 @@ from .serializers import CarSerializer, CarImageSerializer
 class CarViewSet(viewsets.ModelViewSet):
     queryset         = Car.objects.all()
     serializer_class = CarSerializer
-
-    # 1) Standard-Parser: nur JSON
     parser_classes   = [JSONParser]
 
     @action(
         detail=True,
         methods=['post'],
         url_path='upload-images',
-        # 2) Für diese Action nur multipart (FormParser lässt sowohl form-data als auch files zu)
         parser_classes=[MultiPartParser, FormParser]
     )
     def upload_images(self, request, pk=None):
