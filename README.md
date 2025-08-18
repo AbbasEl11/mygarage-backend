@@ -119,7 +119,7 @@ This will insert sample `Car` records (with image paths) into your local databas
 
 Interactive API documentation is available via Swagger UI.
 
-**URL:** [http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)
+**URL:** [API Documentation]([http://127.0.0.1:8000/api/docs/](https://abbasel11.pythonanywhere.com/api/docs/))
 
 You can explore available endpoints, view request/response schemas, and test API calls directly from the browser.
 
